@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+  html {
+    font-size: 62.5%;
+  
+    // 1rem = 16px 9rem 
+    //1 rem = 10px
+  }
+  body {
+    font-family: "Muli", Arial, sans-serif;
+    // min-width: 200vh;
+    background: #fff;
+    color: #6c757d;
+  }
+  #navbar.sticky{
+    padding: 5px 8rem;
+    background-color: #fafafa;
+    // -webkit-box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+    .nav-link.active{
+      color: #ff5f5f;
+    }
+   nav{
+    a{
+      color: #000;
+    }
+   }
+  }
+  #navbar {
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    transition: 0.6s;
+    padding: 2rem 5rem;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      height: 6rem;
+      align-items: center;
+      background-color: transparent;
+      .nav-brand {
+        text-align: start;
+        font-size: 2.2rem;
+        color: #fff;
+      }
+      .menu{
+        position: absolute;
+        right: 1.5rem;
+        top: 3rem;
+        cursor: pointer;
+        display: none;
+        font-size: 1.8rem;
+      }
+      ul {
+        display: flex;
+        column-gap: 5rem;
+        
+        li {
+          
+          
+          a {
+            color: #f0f0f0;
+            font-size: 1.6rem;
+            opacity: 1;
+            &.active{
+              color:rgba(255, 255, 255, 0.5);
+              opacity: 0.6;
+              &:hover{
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+      
+    }
+  }
+
+  #tours-first-section{
+    .heading{
+        font-size: 7rem;
+        color: #fff;
+        position: absolute;
+        top: 25rem;
+        z-index: 100;
+        left: 10rem;
+        width: 80%;
+
+    }
+    
+    .img{
+        
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image: url(../../img/tours.webp);
+        background-position: center;
+        background-attachment: fixed;
+        .overlay{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+           background-color: rgba(0,0,0,0.3);
+          }
+    }
+   
+  }
+
+
+  #card-group-tours{
+    padding: 13rem 2rem;
+   .container{
+    display: flex;
+    width: 100%;
+
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        gap: 2rem;
+        .card{
+          cursor: pointer;
+          position: relative;
+          width: 41%;
+          margin-left: 3rem;
+          height: 40rem;
+          background-size: cover;
+          background-position: center center;
+          &:hover{
+          
+            .content{
+              .price{
+                color: #000;
+              }
+              .tour-destination{
+                color: #000;
+              }
+              .leader{
+                color: #000;
+              }
+              .ratings{
+                .rating{
+                  i{
+                    color: #000;
+                  }
+                }
+                .review{
+                  color: #000;
+                }
+              }
+            }
+            .white-space{
+             height: 40%;
+             background-color: white;
+            }
+          }
+          .white-space{
+            position: absolute;
+            bottom: 0;
+            transition: all 0.3s;
+            width: 100%;
+            height: 0;
+            // -------------------------------
+            // --------------------------------
+          }
+          .rgba{
+            position: absolute;
+              top: 0;
+              width: 100%;
+              height: 100%;
+             background-color: rgba(0,0,0,0.25);
+          }
+          
+          .content{
+            position: absolute;
+            bottom: 2.5rem;
+            left: 2.5rem;
+            line-height: 1.5;
+            .price{
+              color: #fff;
+              font-size:1.6rem;
+              margin-bottom: 2rem;
+              
+            }
+            .tour-destination{
+              font-size: 2.4rem;
+              color: #fff;
+              font-weight: 400;
+            }
+            .leader{
+              line-height: 2.5;
+              font-size: 1.4rem;
+              color: #fff;
+              opacity: .6;
+            }
+            .ratings{
+              display: flex;
+              color: #fff;
+              .rating{
+                margin-right: 10px;
+               
+              } 
+              
+            }
+    
+          }
+        }
+        .first{
+          background-image: url(../../img/video.webp);
+          background-color: rgba(0,0,0,0.14);
+        }
+        .second{
+          background-image: url(../../img/slider-1.webp);
+          background-color: rgba(0,0,0,0.14);
+        }
+        .third{
+          background-image: url(../../img/third.webp);
+          background-color: rgba(0,0,0,0.14);
+        }
+        .fourth{
+          background-image: url(../../img//fourth.webp);
+          background-color: rgba(0,0,0,0.14);
+        }
+        .fifth{
+          background-image: url(../../img/fifth.webp);
+          background-color: rgba(0,0,0,0.14);
+        }
+        .sixth{
+          background-image: url(../../img/sixth.webp);
+          background-color: rgba(0,0,0,0.14);
+        }
+        .seventh{
+          background-image: url(../../img/seventh.webp);
+          background-color: rgba(0,0,0,0.14);
+        }
+        .eighth{
+          background-image: url(../../img/eighth.webp);
+          background-color: rgba(0,0,0,0.14);
+        }
+    
+      }
+      .tours-content{
+          width: 25%;
+          display: flex;
+          flex-direction: column;
+          input,select,button{
+              width: 70%;
+          }
+      }
+   }
+   
+  }
+  
+
+  @media(max-width:850px){
+    #navbar{
+      background-color: #000;
+      position: fixed;
+      nav{
+        align-items: flex-start;
+        flex-direction: column;
+        ul{
+          width: 100%;
+          display: none;
+          flex-direction: column;
+          li{
+            margin-top: 3rem;
+          }
+        }
+        .menu{
+          
+          display: flex;
+        column-gap: 1rem;
+        margin-top: 1rem;
+        }
+        .nav-brand{
+          margin-top: 1.5rem;
+      }
+      }
+    }
+    }
